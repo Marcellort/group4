@@ -1,0 +1,54 @@
+{% include 'header.html' %}
+<div class="container-fluid">
+    <!-- Cabeçalho da pagina -->
+    <div class="d-sm-flex align-items-center justify-content    ">
+                <h1 class="h3 mb-0 text-gray-800">Formulário quiz</h1>
+          </div>
+                <div class="row">
+<div class="col-lg-12">
+    <div class="well well-sm">
+        <form method="POST" action="Formulario">{% csrf_token %}
+        <div class="row">
+        
+            <div class="col-lg-8">
+            <div class="form-group" >
+                    <label for="name">Titulo:</label>
+                    <input type="text" class="form-control" id="titulo_post" placeholder="Insira aqui o titulo" name="titulo" required />
+                </div>
+                <div class="form-group" >
+                    <label for="name">Pergunta 1:</label>
+                    <input type="text" class="form-control" id="titulo_post" placeholder="Insira aqui sua pergunt" name="pergunta1" />
+                </div>
+                <div class="form-group">
+                    <label for="name">Pergunta 2:</label>
+                    <input type="text" class="form-control" id="titulo_post" placeholder="Insira aqui sua pergunta" name="pergunta2" />
+                </div>
+                                        <div class="form-group">
+                    <label for="name">Pergunta 3:</label>
+                    <input type="text" class="form-control" id="titulo_post" placeholder="Insira aqui a 1 Pergunta" name="pergunta3"  />
+                </div>
+                                        <div class="form-group">
+                    <label for="name">Pergunta 4:</label>
+                    <input type="text" class="form-control" id="titulo_post" placeholder="Insira aqui sua pergunta" name="pergunta4"  />
+                </div>
+                                        <div class="form-group">
+                    <label for="name">Pergunta 5:</label>
+                    <input type="text" class="form-control" id="titulo_post" placeholder="Insira aqui sua pergunta" name="pergunta5"  />
+                </div>
+            <div class="col-md-12">
+                <button type="submit" class="btn btn-primary" id="btnEnviarPost">Publicar</button>
+            </div>
+        </div>
+        </form>
+    </div>
+
+
+</div>
+
+
+
+</div>
+
+    <br>
+</div>
+{% include 'footer.html' %}

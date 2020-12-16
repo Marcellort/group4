@@ -1,0 +1,143 @@
+{% include 'header.html' %}
+      <!-- Local onde o autor cria a postagem -->
+
+      <div class="row">
+        <div class="col-lg-12">
+            <div class="well well-sm">
+                <form method="post" action="querys/inserirResposta.php">
+                <div class="row">
+        <?php
+        while($dados=mysqli_fetch_array($result)){  
+        ?>
+        <input type="hidden" value=<?= $user ?>>
+                    <div class="col-lg-8">
+                        <?php
+                        if ($dados['pergunta1']!=Null) {
+                            # code...
+                        
+                        ?>
+                        <div class="form-group" >
+                            <label for="name"><?= $dados['pergunta1'];?></label>
+                            <input type="text" class="form-control" id="titulo_post" placeholder="Insira aqui sua pergunta" name="pergunta1" />
+                        </div>
+                        <?php }?>
+                                                <?php
+                        if ($dados['pergunta2']!=Null) {
+                            # code...
+                        
+                        ?>
+                        <div class="form-group" >
+                            <label for="name"><?= $dados['pergunta2'];?></label>
+                            <input type="text" class="form-control" id="titulo_post" placeholder="Insira aqui sua pergunta" name="pergunta2" />
+                            </div>
+                        <?php }?>
+                                                <?php
+                        if ($dados['pergunta3']!=Null) {
+                            # code...
+                        
+                        ?>
+                        <div class="form-group" >
+                            <label for="name"><?= $dados['pergunta3'];?></label>
+                            <input type="text" class="form-control" id="titulo_post" placeholder="Insira aqui sua pergunta" name="pergunta3" />
+                            </div>
+                        <?php }?>
+                                                <?php
+                        if ($dados['pergunta4']!=Null) {
+                            # code...
+                        
+                        ?>
+                        <div class="form-group" >
+                            <label for="name"><?= $dados['pergunta1'];?></label>
+                            <input type="text" class="form-control" id="titulo_post" placeholder="Insira aqui sua pergunta" name="pergunta4" />
+                            </div>
+                        <?php }else{?>
+                        <input type="hidden" name="pergunta4">
+                        <?php }?>
+                        <?php
+                        if ($dados['pergunta5']!=Null) {
+                            # code...
+                        
+                        ?>
+                        <div class="form-group" >
+                            <label for="name"><?= $dados['pergunta5'];?></label>
+                            <input type="text" class="form-control" id="titulo_post" placeholder="Insira aqui sua pergunta" name="pergunta5" />
+                            </div>
+                                                <?php }else{?>
+                        <input type="hidden" name="pergunta5">
+                        <?php }?>
+                        <?php
+                        if ($dados['pergunta6']!=Null) {
+                            # code...
+                        
+                        ?>
+                        <div class="form-group" >
+                            <label for="name"><?= $dados['pergunta6'];?></label>
+                            <input type="text" class="form-control" id="titulo_post" placeholder="Insira aqui sua pergunta" name="pergunta6" />
+                            </div>
+                                                <?php }else{?>
+                        <input type="hidden" name="pergunta6">
+                        <?php }?>
+                        <?php
+                        if ($dados['pergunta7']!=Null) {
+                            # code...
+                        
+                        ?>
+                        <div class="form-group" >
+                            <label for="name"><?= $dados['pergunta7'];?></label>
+                            <input type="text" class="form-control" id="titulo_post" placeholder="Insira aqui sua pergunta" name="pergunta7" />
+                            </div>
+                                                <?php }else{?>
+                        <input type="hidden" name="pergunta7">
+                        <?php }?>
+                        <?php
+                        if ($dados['pergunta8']!=Null) {
+                            # code...
+                        
+                        ?>
+                        <div class="form-group" >
+                            <label for="name"><?= $dados['pergunta8'];?></label>
+                            <input type="text" class="form-control" id="titulo_post" placeholder="Insira aqui sua pergunta" name="pergunta8" />
+                            </div>
+                                                <?php }else{?>
+                        <input type="hidden" name="pergunta8">
+                        <?php }?>
+                        <?php
+                        if ($dados['pergunta9']!=Null) {
+                            # code...
+                        
+                        ?>
+                        <div class="form-group" >
+                            <label for="name"><?= $dados['pergunta9'];?></label>
+                            <input type="text" class="form-control" id="titulo_post" placeholder="Insira aqui sua pergunta" name="pergunta9" />
+                            </div>
+                                                <?php }else{?>
+                        <input type="hidden" name="pergunta9">
+                        <?php }?>
+                        <?php
+                        if ($dados['pergunta10']!=Null) {
+                            # code...
+                        
+                        ?>
+                        <div class="form-group" >
+                            <label for="name"><?= $dados['pergunta10'];?></label>
+                            <input type="text" class="form-control" id="titulo_post" placeholder="Insira aqui sua pergunta" name="pergunta10" />
+                            </div>
+                                                <?php }else{?>
+                        <input type="hidden" name="pergunta10">
+                        <?php }?>
+                        <input type="hidden" name="idPerguntas" value=<?=$dados['idPerguntas'] ?>>
+<?php } ?>
+                    <div class="col-md-12">
+                        <button type="submit" class="btn btn-primary" id="btnEnviarPost">Publicar</button>
+                    </div>
+                </div>
+                </form>
+            </div>
+
+        
+        </div>
+       
+    
+
+</div>
+{% include 'footer.html' %}
